@@ -1,1 +1,6 @@
 docker run --net staticnet --ip 172.172.0.6 --add-host airflow-worker:172.172.0.7  --privileged=true --name airflow-scheduler --hostname airflow-scheduler -d -P -p 5672:5672 -p 8082:8080  -p 15672:15672 -p 25672:25672 -p 4369:4369 mydockerhello/airflow-scheduler:1.0.1 /sbin/init
+
+
+
+
+authenticate = True auth_backend = airflow.contrib.auth.backends.password_auth filter_by_owner = True
