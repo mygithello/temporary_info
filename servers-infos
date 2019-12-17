@@ -4,3 +4,7 @@ docker run --net staticnet --ip 172.172.0.6 --add-host airflow-worker:172.172.0.
 export PYTHONIOENCODING=utf-8
 
 authenticate = True auth_backend = airflow.contrib.auth.backends.password_auth filter_by_owner = True
+
+
+手把手教你搭建大数据分析平台——Cloudera Manager常见问题解决
+
