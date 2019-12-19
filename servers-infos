@@ -8,3 +8,4 @@ authenticate = True auth_backend = airflow.contrib.auth.backends.password_auth f
 
 手把手教你搭建大数据分析平台——Cloudera Manager常见问题解决
 
+/ # while true; do wget -q -O- http://172.17.0.5:8080; done
