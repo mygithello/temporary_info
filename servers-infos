@@ -14,4 +14,4 @@ authenticate = True auth_backend = airflow.contrib.auth.backends.password_auth f
 k8s
 https://blog.csdn.net/qq_28513801/article/details/98076359
 设置：
-192.168.80.3:8083/servers/airflow-s/15672 -----172.172.0.8:80/servers/a   --> 172.172.0.7:8089
+192.168.80.3:8083/servers/airflow-scheduler/15672 -----172.172.0.8:80/servers/airflow-scheduler/15672   --> 172.172.0.7:8089
