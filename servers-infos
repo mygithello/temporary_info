@@ -29,3 +29,13 @@ https://blog.csdn.net/f8qg7f9yd02pe/article/details/83005700
 
 
 https://www.youneed.win/free-ssr
+
+
+tag="1.0.4"
+
+docker run --net staticip --ip 172.172.0.2 --add-host dn1:172.172.0.3 --add-host dn2:172.172.0.4 --add-host n-rabbitmq:172.172.0.5 --privileged=true --name nna --hostname nna -d -P -p 50070:50070 -p 8088:8088 mydockerhello/nna:${tag} /sbin/init
+wait
+docker run --net staticip --ip 172.172.0.3 --add-host nna:172.172.0.2 --add-host dn2:172.172.0.4 --add-host n-rabbitmq:172.172.0.5 --privileged=true --name dn1 --hostname dn1 -d -P mydockerhello/dn1:${tag} /sbin/init
+wait
+docker run --net staticip --ip 172.172.0.4 --add-host nna:172.172.0.2 --add-host dn1:172.172.0.3 --add-host n-rabbitmq:172.172.0.5 --privileged=true --name dn2 --hostname dn2 -d -P mydockerhello/dn2:${tag} /sbin/init
+
