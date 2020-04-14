@@ -39,3 +39,4 @@ docker run --net staticip --ip 172.172.0.3 --add-host nna:172.172.0.2 --add-host
 wait
 docker run --net staticip --ip 172.172.0.4 --add-host nna:172.172.0.2 --add-host dn1:172.172.0.3 --add-host n-rabbitmq:172.172.0.5 --privileged=true --name dn2 --hostname dn2 -d -P mydockerhello/dn2:${tag} /sbin/init
 
+https://blog.51cto.com/10647376/2322552?source=dra
