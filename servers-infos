@@ -28,6 +28,21 @@ https://blog.csdn.net/Linjingke32/article/details/80993870
 https://blog.csdn.net/f8qg7f9yd02pe/article/details/83005700
 
 
+单个含有main方法的.class 文件如何手动打成jar包：
+
+1.javac FormatUtf8.java 编译.class文件（个别编译报错的部分可以注释掉）
+2.将.class 文件package目录下（在当前目录下新建.class中package 对应的同等目录结构）
+3.在当前目录新建manifest.mf 文件，
+内容：
+Manifest-Version: 1.0
+Main-Class: convertAscIIToUtf8.FormatUtf8
+convertAscIIToUtf8.FormatUtf8：为包路径.类名
+4.当前目录运行jar cfm test.jar manifest.mf convertAscIIToUtf8/
+5.查看当前目录打成名为test.jar，测试jar包是否正常。
+
+
+
+
 https://www.youneed.win/free-ssr
 
 
