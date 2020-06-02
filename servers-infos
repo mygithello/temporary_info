@@ -61,3 +61,6 @@ https://blog.51cto.com/10647376/2322552?source=dra
 create database monitor_strategy owner yacus;
 grant all privileges on database collect_strategy to yacus;
 
+drools:demo
+https://blog.csdn.net/tanglei6636/article/details/94845270
+
