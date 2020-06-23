@@ -113,3 +113,5 @@ SHOW SUBSCRIPTIONS
 
 
 在influxdb中没有专门用来创建measurement的命令，在执行向某个measurement新增记录的时候，如果不存在measurement，则会新创建一个
+
+ ll xsb90.txt |awk '{print  $6 "-" $7 "-" $8 }'
