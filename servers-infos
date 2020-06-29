@@ -33,6 +33,10 @@ https://blog.csdn.net/f8qg7f9yd02pe/article/details/83005700
 
 1.javac FormatUtf8.java 编译.class文件（个别编译报错的部分可以注释掉）
 2.将.class 文件package目录下（在当前目录下新建.class中package 对应的同等目录结构）
+
+
+./kafka-console-consumer.sh --zookeeper localhost:2181 --topic test-metrics2 --from-beginning
+
 3.在当前目录新建manifest.mf 文件，
 内容：
 Manifest-Version: 1.0
