@@ -1,3 +1,4 @@
+hadoop fs -ls /user/hive/warehouse
 ./beeline -u jdbc:hive2://localhost:10000 -n hadoop
 
 drop database if exists test;
