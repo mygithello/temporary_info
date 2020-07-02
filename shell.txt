@@ -1,0 +1,1 @@
+netstat -tpnl   查看正在使用的端口
