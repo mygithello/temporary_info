@@ -1,4 +1,5 @@
-//如何创建 确定 hive 内部表 和外部表  
+//如何创建 确定 hive 内部表 和外部表 
+当重新创建 已经drop过的外部表时，创建完毕后，发现原来的数据仍在表里
 
 
 LOAD DATA [LOCAL] INPATH 'filepath' [OVERWRITE] INTO TABLE tablename [PARTITION (partcol1=val1, partcol2=val2 ...)]
