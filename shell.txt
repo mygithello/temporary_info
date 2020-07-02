@@ -1,2 +1,10 @@
 netstat -tpnl   查看正在使用的端口
 docker inspect 'nna' | grep IPAddress
+
+docker inspect nna  查看配置文件
+
+
+
+将宿主机的9000端口映射到容器的9000端口
+
+iptables -t nat -A  DOCKER -p tcp --dport 9000 -j DNAT --to-destination 172.172.0.2:9000
