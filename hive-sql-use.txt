@@ -1,0 +1,57 @@
+
+create table t1(
+    id      int
+   ,name    string
+   ,hobby   array<string>
+   ,add     map<String,string>
+)
+row format delimited
+fields terminated by ','
+collection items terminated by '-'
+map keys terminated by ':'
+;
+
+desc t1;
+
+show tables;
+
+create table fz
+(id int,name string,age int,tel string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+1,fz,25,131888888888
+2,test,20,13222222222
+3,dx,24,183938384983
+
+load data local inpath '/data/soft/hive/bin/test-data/fz.txt' into table fz;
+
+create external table fz_external_table(id int,name string,age int,tel string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+location '/user/hive/external/fz_external_table';
+
+drop table fz_external_table;
+
+CREATE EXTERNAL TABLE `test.fz_external_table`(
+  `id` int, 
+  `name` string, 
+  `age` int, 
+  `tel` string)
+ROW FORMAT SERDE 
+  'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe' 
+WITH SERDEPROPERTIES ( 
+  'field.delim'=',', 
+  'serialization.format'=',') 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  'hdfs://nna:9000/user/hive/external/fz_external_table'
+
+
+
+insert into t1(id,name) VALUES(3,'ccc')
