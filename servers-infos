@@ -1,3 +1,5 @@
+./beeline -u jdbc:hive2://localhost:10000 -n hadoop
+
 drop database if exists test;
 
 RITM0626862 新电脑  ticket
