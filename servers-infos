@@ -1,6 +1,9 @@
 //如何创建 确定 hive 内部表 和外部表  
 
 
+LOAD DATA [LOCAL] INPATH 'filepath' [OVERWRITE] INTO TABLE tablename [PARTITION (partcol1=val1, partcol2=val2 ...)]
+//insert 哪怕一条，也会创建一个mapreduce 任务，我们选择Load Data 方式
+
 Error running 'ServiceStarter': Command line is too long. Shorten command line for ServiceStarter or also for Application default configuration.
 
 解法:
