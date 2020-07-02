@@ -1,3 +1,6 @@
+//如何创建 确定 hive 内部表 和外部表  
+
+
 Error running 'ServiceStarter': Command line is too long. Shorten command line for ServiceStarter or also for Application default configuration.
 
 解法:
