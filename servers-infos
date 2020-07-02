@@ -2,6 +2,9 @@ drop database if exists test;
 
 RITM0626862 新电脑  ticket
 
+sqoop 增量导入
+https://blog.csdn.net/wiborgite/article/details/80786002
+
 ./kafka-topics.sh -create -zookeeper localhost:2181 -replication-factor 2 -partitions 4 -topic test-name
 
 
