@@ -1,3 +1,25 @@
+
+//load data to partitions table 
+load data local inpath '/data/soft/hive/bin/test-data/fz.txt' into table pt_table partition(log_time='2020-07-01');
+创建分区表
+
+CREATE TABLE `pt_table`(id int,name string,age int,tel string)
+COMMENT ' partions table load data form txt file '
+PARTITIONED BY ( 
+  `log_time` string)
+ROW FORMAT SERDE 
+  'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe' 
+WITH SERDEPROPERTIES ( 
+  'field.delim'='\u0001',  
+  'serialization.format'='\u0001') 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+;
+
+  'line.delim'='\n', 
+
 formatted查看表/分区最新更新时间
 
 hive> desc formatted table_name; 
@@ -9,6 +31,7 @@ hive>select from_unixtime(1527555502,'yyyy/MM/dd HH:mm:ss'); --转换时间戳
 
 hive> desc extended table_name; 
 hive> desc extended table_name partition(partition_name=partition_value);
+
 
 
 describe extended tablename; 查看表的详细信息
