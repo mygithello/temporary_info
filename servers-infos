@@ -1,3 +1,7 @@
+
+docker run --net staticnet --ip 172.172.0.6  --privileged=true --name oracle-sqlplus  mydockerhello/centos7-ssh:1.0.4 /sbin/init
+
+
 //如何创建 确定 hive 内部表 和外部表 
 当重新创建 已经drop过的外部表时，创建完毕后，发现原来的数据仍在表里
 
