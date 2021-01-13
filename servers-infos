@@ -1,3 +1,4 @@
+ps -ef | grep aa.jar|awk '{print $2}' | xargs kill -9
 
 docker run --net staticnet --ip 172.172.0.6  --privileged=true --name oracle-sqlplus  mydockerhello/centos7-ssh:1.0.4 /sbin/init
 
