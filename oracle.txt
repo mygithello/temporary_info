@@ -1,1 +1,32 @@
 sqlplus username/password@//IP:port/SID
+sqlplus username/password@//IP:port/SID
+
+127.0.0.1	localhost
+127.0.1.1	jiayachong-TM1707
+
+
+
+192.168.80.3	nna
+192.168.80.3	dn1
+192.168.80.3	dn2
+172.172.0.5	rabbitmq
+172.172.0.6	airflow-scheduler
+172.172.0.7	airflow-worker
+
+192.168.80.3	servers
+#139.196.204.173	servers
+
+192.168.80.4	k8s-master
+192.168.80.5	k8s-node
+
+
+192.168.80.3	elk
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+0.0.0.0 account.jetbrains.com
+0.0.0.0 www.jetbrains.com
